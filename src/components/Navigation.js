@@ -15,17 +15,20 @@ const Navigation = () => {
               <Nav.Link href="/" className="nav-item nav-link active">
                 Home
               </Nav.Link>
-              {/* <Nav.Link href="aboutus" className="nav-item nav-link">
+              <Nav.Link href="/aboutus" className="nav-item nav-link">
                 About Us
-              </Nav.Link> */}
-              <Nav.Link href="hostels" className="nav-item nav-link active">
-              Hostels
+              </Nav.Link>
+              <Nav.Link href="/hostels" className="nav-item nav-link active">
+                Hostels
+              </Nav.Link>
+              <Nav.Link href="/aboutus" className="nav-item nav-link">
+                Itinerary
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      
+
       <Outlet />
     </>
   );

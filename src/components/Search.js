@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import DisplayHostelItems from "./DisplayHostelItems";
+import HostelSearchItems from "./HostelSearchItems";
 
 function Search({ details }) {
-   const [searchField, setSearchField] = useState("");
-
-   const filtered = details.filter((entry) => {
+  const [searchField, setSearchField] = useState("");
+  
+  const filtered = details.filter((entry) => {
     return entry.name.toLowerCase().includes(searchField.toLowerCase());
   });
 
   // const cafeList = filtered.filter((entry) => {
-  //   return entry.cafe==="true";
+  //   return entry.cafe === true; // Ensure cafe property is correctly checked
   // });
-  
+
   return (	
       <div>
           <div>
@@ -22,7 +22,7 @@ function Search({ details }) {
               onChange={(e) =>  setSearchField(e.target.value)}
             />
           </div>
-          <DisplayHostelItems hostelList={filtered} />
+          <HostelSearchItems hostelList={filtered} />
       </div>
   
   );

@@ -15,7 +15,7 @@ const Map = () => {
   // const initialMarker =  [55.86639, -4.24919]
   const initialMarker = {}
   const [activeHostel, setActiveHostel] = useState(initialMarker);
-  const position = [55.86639, -4.24919];
+  const position = [57.5536434,-4.3297715];
 
   //   const markerClicked = (position) => {   
   //     setActiveHostel(position)

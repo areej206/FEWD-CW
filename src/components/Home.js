@@ -15,11 +15,11 @@ const Home = () => {
         <p> We are especially proud of our absolutely delicious traditional Italian dishes! Super fresh and indulgent. </p>
         <p> Not to mention our fabulous friendly staff - we look forward to welcoming you soon.</p>
        </div> */}
-      <div className="col"><h3>Where we are ...</h3> 
+      <div className="col"><h3>Explore Hostels on the Map</h3> 
        <Map/>
       </div>
         <div className="col">
-        <h3>Explore our Hostels ...</h3>
+        <h3>Search for Hostels</h3>
           {/* <DisplayHostelItems hostelList={hostels} /> */}
           <Search details={hostels}/>
 

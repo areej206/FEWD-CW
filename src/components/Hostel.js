@@ -2,96 +2,37 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const Hostel = ({ hostels }) => {
-  const { hostelId } = useParams();
+  const { id } = useParams();
 
   // Filter hostels based on hostelId
   const currentItem = hostels.filter((entry) => {
-    return entry.id === hostelId;
-  });
+    return entry.id === id;
+  }); 
 
   // Destructure name and address from currentItem
-  const { name, address } = currentItem.length > 0 ? currentItem[0] : {};
+  const { name, address, postcode, phone, email, description } = currentItem.length > 0 ? currentItem[0] : {};
 
   return (
-    <>
+    <div>
       {currentItem.length > 0 ? (
-        <>
-          <h4>Hostel: {name}</h4>
-          <p>{address}</p>
-        </>
+        <div className="hostel-details">
+          <h2>{name}</h2>
+          <hr />
+          <div className="details-section">
+            <p><b>Address:</b> {address}</p>
+            <p><b>Post code:</b> {postcode}</p>
+            <p><b>Phone:</b> {phone}</p>
+            <p><b>Email:</b> {email}</p>
+            <p><b>Description:</b> {description}</p>
+          </div>
+        </div>
       ) : (
-        <p>Hostel not found</p>
+        <h2><b>Hostel not found</b></h2>
       )}
-    </>
+    </div>
+
+
   );
 };
 
 export default Hostel;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-
-// const Hostel = ({ hostels }) => {
-//   const { hostelId } = useParams();
-//   // console.log(hostelId)
-//     const currentItem = hostels.filter((entry) => {
-//     return entry.id === hostelId;
-//   });
-//   const { name, address } = currentItem[0];
-//   return (
-//     <>
-//       <h4>Hostel: {name}</h4>
-//       <p>{address}</p>
-//     </>
-//   );
-// };
-// export default Hostel;
-
-
-
-//FIX THIS PAGE IT DOES NOT DISPLAY.
-//FILTER IS NOT WORKING
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import HostelDetails from './HostelDetails'; // Assuming the file is in the same directory
-
-// const Hostel = ({ hostels }) => {
-//   const { hostelId } = useParams();
-//   const currentItem = hostels.find((entry) => entry.id === hostelId); // Use `find` for a single item
-
-//   return (
-//     <>
-//       {currentItem ? (
-//         <HostelDetails hostel={currentItem} />
-//       ) : (
-//         <p>Hostel not found.</p>
-//       )}
-//     </>
-//   );
-// };
-
-// export default Hostel;

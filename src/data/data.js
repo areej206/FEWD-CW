@@ -27,7 +27,7 @@ export const hostels =[
       "cafe": true,
       "ratings": [2,3,3,4,5,2,3,3,2,4,4,5,4,3,5,4,2],
       "reviews" : [
-          {"reviewer":"anon", "review": "Very handy for the city centre"},
+          {" ,":"anon", "review": "Very handy for the city centre"},
       ]
   },
   {
